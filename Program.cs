@@ -20,7 +20,10 @@ namespace C_
             }
 
             var currencyFactory = new CurrencyFactory(currency).create();
-            Console.WriteLine(currencyFactory.getSign());
+            Console.WriteLine("Enter amount: ");
+            decimal amount = Convert.ToDecimal(Console.ReadLine());
+            currencyFactory.setAmount(amount);
+            currencyFactory.getInfoAmount();
         }
     }
 }
